@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        #tableCanvas {
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        .control-group {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            background: #f9f9f9;
+        }
+        
+        .control-group h3 {
+            margin: 0 0 10px 0;
+            color: #555;
+            font-size: 16px;
+        }
+        
+        select {
+            padding: 5px 10px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="tableCanvas"></canvas>
+        
+        <!-- 日期选择器 -->
+        <input type="date" id="datePicker" style="position: absolute; display: none; z-index: 1000; 
+               border: 2px solid #007bff; border-radius: 4px; padding: 5px; font-size: 14px;">
+        
+        <!-- 数字输入框 -->
+        <input type="number" id="numberInput" style="position: absolute; display: none; z-index: 1000; 
+               border: 2px solid #28a745; border-radius: 4px; padding: 5px; font-size: 14px; width: 120px;">
+        
+        <!-- 文字输入框 -->
+        <input type="text" id="textInput" style="position: absolute; display: none; z-index: 1000; 
+               border: 2px solid #6f42c1; border-radius: 4px; padding: 5px; font-size: 14px; width: 140px;">
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="table.js"></script>
+</body>
+</html>
